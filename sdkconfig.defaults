@@ -1,0 +1,26 @@
+# Target chip (Adafruit Matrix Portal S3)
+CONFIG_IDF_TARGET="esp32s3"
+
+# ------------------------------------------------------------------
+# Adafruit Matrix Portal S3 hardware
+# ------------------------------------------------------------------
+
+# 8 MB QSPI flash (QIO, 80 MHz)
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+
+# 8 MB octal PSRAM
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+
+# Console (logs) on the board's USB-C port via native USB-Serial-JTAG.
+# Leave CONFIG_ESPTOOLPY_PORT at its default so `idf.py flash` auto-detects.
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+
+# 1 kHz systick for smoother animation timing
+CONFIG_FREERTOS_HZ=1000
+
+# app_main owns the display demo loop, give it room
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192

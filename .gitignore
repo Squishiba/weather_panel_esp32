@@ -66,3 +66,20 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# ------------------------------------------------------------------
+# ESP-IDF specifics
+# ------------------------------------------------------------------
+managed_components/
+dependencies.lock.bak
+# Generated from sdkconfig.defaults
+sdkconfig
+sdkconfig.old
+
+# CLion / IDE & local config
+.idea/
+cmake-build*/
+
+# Misc
+__pycache__/
+*.pyc

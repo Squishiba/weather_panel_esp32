@@ -1,0 +1,5 @@
+dependencies:
+  idf: ">=5.2"
+  # HUB75 DMA driver for ESP32-S3 (LCD_CAM + GDMA), same DMA-refresh model
+  # as Interstate75 on the RP2350 build.
+  esphome/esp-hub75: "^0.3.6"
